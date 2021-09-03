@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        "hi" => "Hello World!",
+        "src" => "https://c.tenor.com/V4jrINyqhGcAAAAi/dance-dancing.gif"
+    ];
+    return view('home', $data);
 });
